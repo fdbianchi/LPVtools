@@ -1,0 +1,43 @@
+\documentclass{standalone}
+
+%\input{macros_block.tex}
+
+%\input{../localmacros}
+%\usepackage[framed]{../mcode}
+%\newcommand{\var}[1]{{\fontfamily{pcr}\selectfont#1}}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsbsy, amsfonts}
+\usepackage{pstricks-add,pst-plot,pst-eps,pst-circ}
+
+\newcommand{\p}{\rho}
+\newcommand{\Rset}{\mathbb{R}}
+\newcommand{\Pset}{\mathcal{P}}
+\newcommand{\Pdset}{\mathcal{P}_d}
+\usepackage{accents}
+\newcommand{\maxS}[1]{\bar{#1}}
+\newcommand{\minS}[1]{\underaccent{\bar}{#1}}
+
+\begin{document}
+
+
+
+\begin{pspicture}[showgrid=false](-1.5,-0.5)(4.5,3.5)
+
+    \psset{linewidth=0.5pt,dotsize=2pt 0.5}
+    \small
+
+    \pnode(0,0){p1}
+    \pnode(3,0){p2}
+    \pnode(0,3){p3}
+    \pnode(3,3){p4}
+
+    \psframe[linestyle=solid,linecolor=teal,fillstyle=solid,fillcolor=teal!20](p1)(p4)
+    \psdot(p1)\uput[180](p1){$(\minS{\p}_1,\minS{\p}_2)$}
+    \psdot(p2)\uput[0](p2){$(\maxS{\p}_1,\minS{\p}_2)$}
+    \psdot(p3)\uput[180](p3){$(\minS{\p}_1,\maxS{\p}_2)$}
+    \psdot(p4)\uput[0](p4){$(\maxS{\p}_1,\maxS{\p}_2)$}
+
+
+\end{pspicture}
+
+\end{document}

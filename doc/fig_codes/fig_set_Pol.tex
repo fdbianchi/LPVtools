@@ -1,0 +1,55 @@
+\documentclass{standalone}
+
+%\input{macros_block.tex}
+
+%\input{../localmacros}
+%\usepackage[framed]{../mcode}
+%\newcommand{\var}[1]{{\fontfamily{pcr}\selectfont#1}}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsbsy, amsfonts}
+\usepackage{pstricks-add,pst-plot,pst-eps,pst-circ}
+
+\newcommand{\p}{\rho}
+\newcommand{\Rset}{\mathbb{R}}
+\newcommand{\Pset}{\mathcal{P}}
+\newcommand{\Pdset}{\mathcal{P}_d}
+\usepackage{accents}
+\newcommand{\maxS}[1]{\bar{#1}}
+\newcommand{\minS}[1]{\underaccent{\bar}{#1}}
+
+\begin{document}
+
+
+
+\begin{pspicture}[showgrid=false](-1.5,-0.5)(4.5,3.5)
+
+    \psset{linewidth=0.5pt,dotsize=2pt 0.5}
+    \small
+
+    \psset{linewidth=0.5pt,dotsize=2pt 0.5}
+    \small
+
+    \pnode(0.1,0.1){p1}
+    \pnode(2.5,0.3){p2}
+    \pnode(3,2.6){p3}
+    \pnode(1,3){p4}
+    \pnode(0,1.6){p5}
+
+    \pspolygon[linestyle=solid,linecolor=teal,fillstyle=solid,fillcolor=teal!20](p1)(p2)(p3)(p4)(p5)
+%    \psline[linecolor=teal](p1)(p2)
+%    \psline[linecolor=teal](p2)(p4)
+%    \psline[linecolor=teal](p4)(p3)
+%    \psline[linecolor=teal](p3)(p1)
+    \psdot(p1)\uput[180](p1){$\hat{\p}^1$}
+    \psdot(p2)\uput[0](p2){$\hat{\p}^2$}
+    \psdot(p3)\uput[0](p3){$\hat{\p}^3$}
+    \psdot(p4)\uput[180](p4){$\hat{\p}^4$}
+    \psdot(p5)\uput[180](p5){$\hat{\p}^5$}
+
+    
+    
+    
+
+\end{pspicture}
+
+\end{document}

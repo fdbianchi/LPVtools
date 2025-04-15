@@ -1,0 +1,67 @@
+\documentclass{standalone}
+
+%\input{macros_block.tex}
+
+%\input{../localmacros}
+%\usepackage[framed]{../mcode}
+%\newcommand{\var}[1]{{\fontfamily{pcr}\selectfont#1}}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsbsy, amsfonts}
+\usepackage{pstricks-add,pst-plot,pst-eps,pst-circ}
+
+\newcommand{\p}{\rho}
+\newcommand{\Rset}{\mathbb{R}}
+\newcommand{\Pset}{\mathcal{P}}
+\newcommand{\Pdset}{\mathcal{P}_d}
+\usepackage{accents}
+\newcommand{\maxS}[1]{\bar{#1}}
+\newcommand{\minS}[1]{\underaccent{\bar}{#1}}
+
+\begin{document}
+
+
+
+\begin{pspicture}[showgrid=false](-1.5,-0.5)(4.5,3.5)
+
+    \psset{linewidth=0.5pt,dotsize=2pt 0.5}
+    \small
+
+    \pnode(0,0){p10}\pnode(0.5,0){p11}\pnode(1,0){p12}
+    \pnode(2.5,0){p13}\pnode(3,0){p14}
+    \pnode(0,0.4){p20}\pnode(0.5,0.4){p21}\pnode(1,0.4){p22}
+    \pnode(2.5,0.4){p23}\pnode(3,0.4){p24}
+    \pnode(0,1){p30}\pnode(0.5,1){p31}\pnode(1,1){p32}
+    \pnode(2.5,1){p33}\pnode(3,1){p34}
+    \pnode(0,2.5){p40}\pnode(0.5,2.5){p41}\pnode(1,2.5){p42}
+    \pnode(2.5,2.5){p43}\pnode(3,2.5){p44}
+    \pnode(0,3){p50}\pnode(0.5,3){p51}\pnode(1,3){p52}
+    \pnode(2.5,3){p53}\pnode(3,3){p54}
+
+    \psframe[linestyle=solid,linecolor=teal,fillstyle=solid,fillcolor=teal!20](p10)(p54)
+
+    \psline[linecolor=gray!70](p20)(p24)
+    \psline[linecolor=gray!70](p30)(p34)
+    \psline[linecolor=gray!70](p40)(p44)
+    \psline[linecolor=gray!70](p11)(p51)
+    \psline[linecolor=gray!70](p12)(p52)
+    \psline[linecolor=gray!70](p13)(p53)
+
+    \uput[180](p10){$(\minS{\p}_1,\minS{\p}_2)$}
+    \uput[0](p14){$(\maxS{\p}_1,\minS{\p}_2)$}
+    \uput[180](p50){$(\minS{\p}_1,\maxS{\p}_2)$}
+    \uput[0](p54){$(\maxS{\p}_1,\maxS{\p}_2)$}
+    \psdot(p10)\psdot(p11)\psdot(p12)\psdot(p13)\psdot(p14)
+    \psdot(p20)\psdot(p21)\psdot(p22)\psdot(p23)\psdot(p24)
+    \psdot(p30)\psdot(p31)\psdot(p32)\psdot(p33)\psdot(p34)
+    \psdot(p40)\psdot(p41)\psdot(p42)\psdot(p43)\psdot(p44)
+    \psdot(p50)\psdot(p51)\psdot(p52)\psdot(p53)\psdot(p54)
+
+    \rput{0}(1.8,0.2){$\dots$}
+    \rput{90}(0.2,1.8){$\dots$}
+
+
+
+
+\end{pspicture}
+
+\end{document}
