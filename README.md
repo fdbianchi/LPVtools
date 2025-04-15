@@ -35,4 +35,4 @@ const(2) = synConst.Poles('MaxFreq',1000);
 pdK = lpvsyn(pdGaw,3,2,const1);
 ```
 
-In the folder **demos**, it can be found several examples of the use of the toolbox in more complex applications. A documentation report can be found in the folder **foc**.
+In the folder **demos**, it can be found several examples of the use of the toolbox in more complex applications. A documentation report can be found in the folder **doc**.
